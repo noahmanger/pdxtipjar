@@ -2,54 +2,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700;900&display=swap");
 @import "modal.scss";
 
+$small: 400px;
+$medium: 700px;
+$large: 1000px;
+
 body {
   font-family: "Work Sans", sans-serif;
-}
-
-.button {
-  display: block;
-  padding: 10px;
-  width: 100%;
-  border-radius: 5px;
-  color: #fff;
-  text-align: center;
-  text-decoration: none;
-  font-weight: bold;
-
-  &.cashapp {
-    background-color: #28c101;
-  }
-
-  &.paypal {
-    background-color: #003087;
-  }
-
-  &.venmo {
-    background-color: #3d95ce;
-  }
-}
-
-body {
   background-color: #ffe7e2;
-  border: 20px solid #fbaa9a;
   position: absolute;
   width: 100%;
   height: 100%;
   overflow-y: scroll;
+  border: 10px solid #fbaa9a;
+  padding-bottom: 100px;
+
+  @media (min-width: $medium) {
+    border: 20px solid #fbaa9a;
+  }
 }
 
 footer {
-  padding: 30px;
+  padding: 30px 0;
+  position: fixed;
+  bottom: 0;
+  background: #fbaa9a;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  a {
+    color: #fff;
+  }
 }
 
 main {
-  max-width: 900px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 30px;
+  padding: 10px;
+
+  @media (min-width: $medium) {
+    padding: 20px;
+  }
 }
 
 a {
-  color: #fff;
+  color: teal;
 }
 
 button {
@@ -85,25 +81,42 @@ nav {
     text-decoration: none;
     color: #fbaa9a;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 18px;
     border: 1px solid #fbaa9a;
   }
 }
 
 .table-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-bottom: 20px;
-
   h2 {
     font-size: 18px;
-    margin: 0;
   }
 
   input {
     background: url("/images/search.svg") #fff no-repeat 5px 50%;
     padding-left: 35px;
+    width: 100%;
+  }
+
+  @media (min-width: $medium) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      margin: 0;
+    }
+
+    input {
+      width: auto;
+    }
+  }
+}
+
+.table {
+  .payment-button {
+    font-size: 14px;
+    padding: 5px 10px;
   }
 }
 
@@ -112,21 +125,53 @@ nav {
 }
 
 .intro p {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5;
+
+  @media (min-width: $medium) {
+    font-size: 18px;
+  }
+}
+
+.button {
+  display: block;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+
+  &.cashapp {
+    background-color: #28c101;
+  }
+
+  &.paypal {
+    background-color: #003087;
+  }
+
+  &.venmo {
+    background-color: #3d95ce;
+  }
+
+  @media (min-width: $medium) {
+    font-size: 18px;
+  }
 }
 
 .random-button {
+  @extend .button;
   background: teal;
   color: #fff;
   font-weight: bold;
-  font-size: 18px;
   width: 100%;
   border: none;
-  border-radius: 5px;
   padding: 10px 30px;
-  margin-bottom: 20px;
-  font-size: 24px;
+  margin: 20px 0;
+  font-size: 18px;
+  border: 1px solid teal;
 }
 
 .fine-print {

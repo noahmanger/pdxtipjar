@@ -29,7 +29,10 @@ const buildURL = (app, handle) => {
 
 const PaymentButton = ({ app, handle }) => {
   return (
-    <a className={`button ${app.toLowerCase()}`} href={buildURL(app, handle)}>
+    <a
+      className={`payment-button button ${app.toLowerCase()}`}
+      href={buildURL(app, handle)}
+    >
       Tip on {app}
     </a>
   );

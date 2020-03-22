@@ -27,7 +27,8 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <main>{children}</main>
       <footer>
-        <Link to="about">About</Link>
+        <Link to="/">Home</Link> | <Link to="about">About</Link> |{" "}
+        <Link to="donate">Donate</Link> | <Link to="signup">Sign up</Link>
       </footer>
     </>
   );

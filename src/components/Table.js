@@ -37,7 +37,7 @@ const customStyles = {
   },
   rows: {
     style: {
-      fontSize: "14px",
+      fontSize: "12px",
       backgroundColor: "transparent",
       "&:not(:last-of-type)": {
         borderBottomStyle: "solid",
@@ -95,7 +95,7 @@ const Table = ({ data }) => {
   }
 
   return (
-    <div>
+    <div className="table">
       <header className="table-header">
         <h2>{rows.length} people looking for tips</h2>
         <input

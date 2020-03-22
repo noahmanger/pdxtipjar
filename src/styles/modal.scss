@@ -10,8 +10,8 @@
 
 .modal {
   animation: fadein 0.1s ease-out;
-  top: 10vh;
-  height: 80vh;
+  top: 20px;
+  bottom: 20px;
   left: 50%;
   background: #fff;
   width: 90%;
@@ -20,6 +20,8 @@
   position: fixed;
   padding: 50px 20px;
   box-shadow: 0 10px 20px 10px rgba(130, 104, 104, 0.45);
+  overflow-y: scroll;
+  z-index: 10;
 
   @media (min-width: 700px) {
     max-width: 600px;

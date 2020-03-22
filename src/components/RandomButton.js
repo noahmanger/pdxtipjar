@@ -5,7 +5,7 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
-const RandomButton = ({ handleClick }) => {
+const RandomButton = ({ text, handleClick }) => {
   return (
     <button
       className="random-button"
@@ -19,7 +19,7 @@ const RandomButton = ({ handleClick }) => {
           .catch(err => console.log(err));
       }}
     >
-      Find a random person to tip
+      {text}
     </button>
   );
 };
