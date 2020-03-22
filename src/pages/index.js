@@ -1,14 +1,41 @@
-import React from "react"
+import React from "react";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import SignupForm from "../components/SignupForm"
+import { Link } from "gatsby";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+
+const Intro = () => (
+  <div className="intro">
+    <p>
+      With a government mandate in effect as of Tuesday, March 17th, all bars
+      &amp; restaurants in the state of Oregon are required to close for the
+      next four weeks, with the exception of take-out and delivery operations.
+      We don't truly know how long this will last &amp; what the lasting
+      economic impact will be for service industry workers. I'm following the
+      examples of DC, Pittsburgh, &amp; Indianapolis by starting a Virtual Tip
+      Jar.
+    </p>
+    <p>
+      If you'd like to support our Portland service industry workers during
+      these uncertain--and very stressful--times, I'm compiling a list of cooks,
+      bartenders, servers, baristas, dishwashers, &amp; other essential folks
+      who keep our city's food &amp; beverage culture thriving. A small
+      contribution can help these folks stay afloat financially while we wait to
+      see what develops in the coming weeks.
+    </p>
+    <p>Grateful for your support, Jacqi Ko of Hey Love</p>
+  </div>
+);
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Sign up</h1>
+    <Intro />
+    <nav>
+      <Link to="signup">Sign up to receive tips</Link>
+      <Link to="donate">Browse the full list</Link>
+    </nav>
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;

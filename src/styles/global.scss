@@ -1,1 +1,103 @@
 @import "reset.scss";
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700;900&display=swap");
+
+body {
+  font-family: "Work Sans", sans-serif;
+}
+
+.button {
+  display: block;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+
+  &.cashapp {
+    background-color: #28c101;
+  }
+
+  &.paypal {
+    background-color: #003087;
+  }
+
+  &.venmo {
+    background-color: #3d95ce;
+  }
+}
+
+body {
+  background-color: #ffe7e2;
+  border: 20px solid #fbaa9a;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+footer {
+  padding: 30px;
+}
+
+main {
+  padding: 30px;
+}
+
+a {
+  color: #fff;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: none;
+}
+
+.site-header {
+  background-color: #ffc8bd;
+  padding: 30px;
+  text-align: center;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 900;
+  }
+}
+
+nav {
+  a {
+    display: block;
+    background: #fff;
+    padding: 10px 30px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #fbaa9a;
+    font-weight: bold;
+    font-size: 24px;
+    border: 1px solid #fbaa9a;
+  }
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
+  h2 {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  input {
+    background-image: url("/src/images/search.svg");
+  }
+}
+
+.rdt_TableBody {
+  max-height: 100% !important;
+}
