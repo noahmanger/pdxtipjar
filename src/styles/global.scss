@@ -133,6 +133,32 @@ nav {
   }
 }
 
+.random-button {
+  @extend .button;
+  background-color: teal;
+  color: #fff;
+  font-weight: bold;
+  width: 100%;
+  border: none;
+  padding: 10px 30px;
+  margin: 20px 0;
+  font-size: 18px;
+  border: 1px solid teal;
+}
+
+.fine-print {
+  padding: 30px 0;
+  font-size: 14px;
+
+  h4 {
+    margin-bottom: 10px;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
 .button {
   display: block;
   padding: 10px;
@@ -158,31 +184,5 @@ nav {
 
   @media (min-width: $medium) {
     font-size: 18px;
-  }
-}
-
-.random-button {
-  @extend .button;
-  background: teal;
-  color: #fff;
-  font-weight: bold;
-  width: 100%;
-  border: none;
-  padding: 10px 30px;
-  margin: 20px 0;
-  font-size: 18px;
-  border: 1px solid teal;
-}
-
-.fine-print {
-  padding: 30px 0;
-  font-size: 14px;
-
-  h4 {
-    margin-bottom: 10px;
-  }
-
-  a {
-    color: inherit;
   }
 }
