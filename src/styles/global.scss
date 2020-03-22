@@ -1,5 +1,6 @@
 @import "reset.scss";
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700;900&display=swap");
+@import "modal.scss";
 
 body {
   font-family: "Work Sans", sans-serif;
@@ -42,6 +43,8 @@ footer {
 }
 
 main {
+  max-width: 900px;
+  margin: 0 auto;
   padding: 30px;
 }
 
@@ -49,9 +52,14 @@ a {
   color: #fff;
 }
 
+button {
+  cursor: pointer;
+}
+
 input[type="text"] {
   padding: 10px;
   border: none;
+  border-radius: 5px;
 }
 
 .site-header {
@@ -94,10 +102,42 @@ nav {
   }
 
   input {
-    background-image: url("/src/images/search.svg");
+    background: url("/images/search.svg") #fff no-repeat 5px 50%;
+    padding-left: 35px;
   }
 }
 
 .rdt_TableBody {
   max-height: 100% !important;
+}
+
+.intro p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.random-button {
+  background: teal;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 30px;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.fine-print {
+  padding: 30px 0;
+  font-size: 14px;
+
+  h4 {
+    margin-bottom: 10px;
+  }
+
+  a {
+    color: inherit;
+  }
 }

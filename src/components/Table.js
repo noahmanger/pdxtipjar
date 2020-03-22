@@ -1,5 +1,6 @@
 import React from "react";
 import DataTable from "react-data-table-component";
+import PaymentButton from "./PaymentButton";
 
 const HEADERS = {
   work: "Where did you work",
@@ -47,33 +48,6 @@ const customStyles = {
   },
 };
 
-const stripHandle = handle => {
-  if (handle.startsWith("@")) {
-    return handle.split("@")[1];
-  }
-  if (handle.startsWith("$")) {
-    return handle.split("$")[1];
-  }
-  if (handle.startsWith("Paypal.me/")) {
-    return handle.split("Paypal.me/")[1];
-  }
-  return handle;
-};
-
-const buildURL = (app, handle) => {
-  if (app === "Venmo") {
-    return `https://venmo.com/${stripHandle(handle)}`;
-  }
-
-  if (app === "Cashapp") {
-    return `https://cash.app/$${stripHandle(handle)}`;
-  }
-
-  if (app === "Paypal") {
-    return `https://paypal.me/${stripHandle(handle)}`;
-  }
-};
-
 const generateColumns = row =>
   Object.keys(row)
     .filter(d => VISIBLE_COLUMNS.indexOf(d) > -1)
@@ -82,14 +56,7 @@ const generateColumns = row =>
         return {
           name: HEADERS[d],
           selector: d,
-          cell: row => (
-            <a
-              className={`button ${row.app.toLowerCase()}`}
-              href={buildURL(row.app, row.handle)}
-            >
-              Tip on {row.app}
-            </a>
-          ),
+          cell: row => <PaymentButton app={row.app} handle={row.handle} />,
         };
       }
       if (d === "name") {
@@ -121,6 +88,10 @@ const Table = ({ data }) => {
   if (data.length > 0 && rows.length === 0) {
     setColumns(generateColumns(data[0]));
     setRows(data.slice(1).map((r, i) => ({ ...{ id: i }, ...r })));
+  }
+
+  if (rows.length === 0) {
+    return <p className="loading">Loading...</p>;
   }
 
   return (
