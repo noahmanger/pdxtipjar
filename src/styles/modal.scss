@@ -16,10 +16,10 @@
   background: #fff;
   width: 90%;
   margin-left: -45%;
-  border: 10px solid teal;
+  border: 10px solid $green;
   position: fixed;
   padding: 50px 20px;
-  box-shadow: 0 10px 20px 10px rgba(130, 104, 104, 0.45);
+  box-shadow: 0 10px 20px 10px rgba($peach, 0.8);
   overflow-y: scroll;
   z-index: 10;
 
@@ -29,8 +29,9 @@
   }
 
   h2 {
-    border-bottom: 5px solid teal;
+    border-bottom: 5px solid $green;
     padding-bottom: 30px;
+    color: $green;
   }
 }
 

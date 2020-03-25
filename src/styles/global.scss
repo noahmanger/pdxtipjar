@@ -1,6 +1,5 @@
 @import "reset.scss";
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700;900&display=swap");
-@import "modal.scss";
 
 $small: 400px;
 $medium: 700px;
@@ -11,6 +10,9 @@ $tangerine: #ffae80;
 $mint: #e2efbb;
 $peach: #ff9469;
 $border: $peach;
+$green: #67cc66;
+
+@import "modal.scss";
 
 body {
   font-family: "Work Sans", sans-serif;
@@ -51,7 +53,7 @@ main {
 }
 
 a {
-  color: teal;
+  color: $green;
 }
 
 button {
@@ -123,6 +125,13 @@ nav {
     font-size: 14px;
     padding: 5px 10px;
   }
+
+  .person {
+    background: none;
+    border: none;
+    padding: 0;
+    text-align: left;
+  }
 }
 
 .rdt_TableBody {
@@ -140,15 +149,14 @@ nav {
 
 .random-button {
   @extend .button;
-  background-color: teal;
-  color: #fff;
+  background-color: $green;
   font-weight: bold;
   width: 100%;
   border: none;
   padding: 10px 30px;
   margin: 20px 0;
   font-size: 18px;
-  border: 1px solid teal;
+  border: 1px solid $green;
 }
 
 .fine-print {

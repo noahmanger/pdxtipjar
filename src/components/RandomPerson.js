@@ -9,7 +9,7 @@ const RandomPersonContent = props => {
 
   return (
     <div className="random-person">
-      <h2>Here's a random person who could use your money!</h2>
+      <h2>Here's someone who could use your money!</h2>
       <h3>{person.name}</h3>
       <h4>{person.work}</h4>
       {person.role && (
@@ -27,7 +27,9 @@ const RandomPersonContent = props => {
         <strong>{person.app}:</strong> {person.handle}
       </p>
       <PaymentButton app={person.app} handle={person.handle} />
-      <RandomButton handleClick={setPerson} text="Find another!" />
+      {props.random && (
+        <RandomButton handleClick={setPerson} text="Find another!" />
+      )}
 
       <div className="fine-print">
         <h4>How this works</h4>
@@ -47,11 +49,11 @@ const RandomPersonContent = props => {
   );
 };
 
-const RandomPerson = ({ person, clearPerson }) => (
+const RandomPerson = ({ person, clearPerson, random }) => (
   <Modal
     content={<RandomPersonContent person={person} />}
     closeModal={clearPerson}
-    dark
+    random
   />
 );
 
