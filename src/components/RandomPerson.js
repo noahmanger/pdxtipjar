@@ -23,6 +23,9 @@ const RandomPersonContent = props => {
       <p>
         <strong>Do you support others?</strong> {person.support_others}
       </p>
+      <p>
+        <strong>{person.app}:</strong> {person.handle}
+      </p>
       <PaymentButton app={person.app} handle={person.handle} />
       <RandomButton handleClick={setPerson} text="Find another!" />
 
