@@ -9,7 +9,7 @@ const RandomPersonContent = props => {
 
   return (
     <div className="random-person">
-      <h2>Here's someone who could use your money!</h2>
+      <h2>Here's someone who could use a tip!</h2>
       <h3>{person.name}</h3>
       <h4>{person.work}</h4>
       {person.role && (
@@ -30,30 +30,14 @@ const RandomPersonContent = props => {
       {props.random && (
         <RandomButton handleClick={setPerson} text="Find another!" />
       )}
-
-      <div className="fine-print">
-        <h4>How this works</h4>
-        <p>
-          The people on this list are all facing significant lost earnings.
-          They've provided a payment app that you can send them a virtual tip
-          on. Pretend you just spent a night out at the bar and they provided
-          you great service over several rounds.
-        </p>
-        <p>
-          If you want to support people from a particular restaurant or with
-          particular needs, head on over to{" "}
-          <Link to="donate">the full list</Link>.
-        </p>
-      </div>
     </div>
   );
 };
 
 const RandomPerson = ({ person, clearPerson, random }) => (
   <Modal
-    content={<RandomPersonContent person={person} />}
+    content={<RandomPersonContent person={person} random={random} />}
     closeModal={clearPerson}
-    random
   />
 );
 

@@ -24,7 +24,11 @@ const AboutPage = () => (
       contribution can help these folks stay afloat financially while we wait to
       see what develops in the coming weeks.
     </p>
-    <p>Grateful for your support, Jacqi Ko of Hey Love</p>
+    <p>Grateful for your support,</p>
+    <p>Jacqi Ko of Hey Love</p>
+    <p>
+      <a href="mailto:jacqi@heylovepdx.com">jacqi@heylovepdx.com</a>
+    </p>
     <h2>Resources</h2>
     <ul>
       <li>

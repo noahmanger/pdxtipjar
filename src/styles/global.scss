@@ -10,7 +10,7 @@ $tangerine: #ffae80;
 $mint: #e2efbb;
 $peach: #ff9469;
 $border: $peach;
-$green: #67cc66;
+$green: #48c36e;
 
 @import "modal.scss";
 
@@ -22,7 +22,6 @@ body {
   height: 100%;
   overflow-y: scroll;
   border: 10px solid $border;
-  padding-bottom: 100px;
 
   @media (min-width: $medium) {
     border: 20px solid $border;
@@ -31,8 +30,6 @@ body {
 
 footer {
   padding: 30px 0;
-  position: fixed;
-  bottom: 0;
   background: $border;
   width: 100%;
   text-align: center;
@@ -45,7 +42,7 @@ footer {
 main {
   max-width: 960px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 10px 20px;
 
   @media (min-width: $medium) {
     padding: 20px;
@@ -53,7 +50,7 @@ main {
 }
 
 a {
-  color: $green;
+  color: #000;
 }
 
 button {
@@ -90,6 +87,17 @@ nav {
     font-weight: bold;
     font-size: 18px;
     border: 1px solid #fbaa9a;
+  }
+}
+
+.logo {
+  border-radius: 100%;
+  transition: all 0.1s ease-out;
+  margin: 0;
+
+  &:hover {
+    box-shadow: 0 0 0 10px rgb(145, 214, 122);
+    transform: rotate(20deg);
   }
 }
 
@@ -147,6 +155,17 @@ nav {
   }
 }
 
+.pledge {
+  padding-top: 40px;
+  margin-top: 40px;
+  border-top: 2px solid $peach;
+
+  img {
+    max-width: calc(50% - 40px);
+    margin: 10px;
+  }
+}
+
 .random-button {
   @extend .button;
   background-color: $green;
@@ -157,19 +176,6 @@ nav {
   margin: 20px 0;
   font-size: 18px;
   border: 1px solid $green;
-}
-
-.fine-print {
-  padding: 30px 0;
-  font-size: 14px;
-
-  h4 {
-    margin-bottom: 10px;
-  }
-
-  a {
-    color: inherit;
-  }
 }
 
 .button {
