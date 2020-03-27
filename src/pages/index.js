@@ -24,10 +24,11 @@ const Intro = () => (
     <p>
       The premise is simple: Tip a dollar, $5, $10, $20—or whatever you’d
       like—directly to a Service Industry worker! Tip someone at random or
-      browse the full list to find your favorite spots.
+      browse the <Link to="donate">full list to find your favorite spots</Link>.
     </p>
     <p>
-      If you’re a Service Industry worker, fill out the form to receive tips
+      If you’re a Service Industry worker,{" "}
+      <Link to="signup">fill out the form to receive tips</Link>
       directly through your Cashapp, Venmo, or PayPal.
     </p>
   </div>
