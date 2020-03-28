@@ -15,6 +15,11 @@ const HEADERS = {
 
 const VISIBLE_COLUMNS = ["work", "name", "app", "support_others", "healthcare"];
 
+const tableOverrideStyles = {
+  marginBottom: '0px',
+  paddingBottom: '0px',
+};
+
 const customStyles = {
   table: {
     style: {
@@ -123,6 +128,7 @@ const Table = ({ data }) => {
           columns={columns}
           data={filteredItems}
           customStyles={customStyles}
+          style={tableOverrideStyles}
           fixedHeader
           noHeader
           overflowY
