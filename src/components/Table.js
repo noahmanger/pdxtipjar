@@ -129,6 +129,7 @@ const Table = ({ data }) => {
           data={filteredItems}
           customStyles={customStyles}
           style={tableOverrideStyles}
+          pagination
           fixedHeader
           noHeader
           overflowY
