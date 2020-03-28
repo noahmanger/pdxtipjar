@@ -24,11 +24,11 @@ const Intro = () => (
     <p>
       The premise is simple: Tip a dollar, $5, $10, $20—or whatever you’d
       like—directly to a Service Industry worker! Tip someone at random or
-      browse the <Link to="donate">full list to find your favorite spots</Link>.
+      browse the <Link to="/donate">full list to find your favorite spots</Link>.
     </p>
     <p>
       If you’re a Service Industry worker,{" "}
-      <Link to="signup">fill out the form to receive tips</Link>
+      <Link to="/signup">fill out the form to receive tips</Link>
       directly through your Cashapp, Venmo, or PayPal.
     </p>
   </div>
@@ -86,8 +86,8 @@ const IndexPage = () => {
         text="Find a random person to tip"
       />
       <nav>
-        <Link to="donate">Browse the full list</Link>
-        <Link to="signup">Sign up to receive tips</Link>
+        <Link to="/donate">Browse the full list</Link>
+        <Link to="/signup">Sign up to receive tips</Link>
       </nav>
       <Pledge />
     </Layout>

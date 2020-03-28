@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "gatsby";
 import Modal from "./Modal";
 import PaymentButton from "./PaymentButton";
 import RandomButton from "./RandomButton";
