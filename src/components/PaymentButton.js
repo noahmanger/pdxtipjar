@@ -1,4 +1,5 @@
 import React from "react";
+import { OutboundLink } from "gatsby-plugin-google-analytics";
 
 const stripHandle = handle => {
   if (handle.startsWith("@")) {
@@ -29,12 +30,13 @@ const buildURL = (app, handle) => {
 
 const PaymentButton = ({ app, handle }) => {
   return (
-    <a
+    <OutboundLink
       className={`payment-button button ${app.toLowerCase()}`}
       href={buildURL(app, handle)}
+      target="_blank"
     >
       Tip on {app}
-    </a>
+    </OutboundLink>
   );
 };
 

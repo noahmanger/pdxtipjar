@@ -16,8 +16,8 @@ const HEADERS = {
 const VISIBLE_COLUMNS = ["work", "name", "app", "support_others", "healthcare"];
 
 const tableOverrideStyles = {
-  marginBottom: '0px',
-  paddingBottom: '0px',
+  marginBottom: "0px",
+  paddingBottom: "0px",
 };
 
 const customStyles = {
@@ -41,15 +41,32 @@ const customStyles = {
       fontWeight: "bold",
     },
   },
+  cells: {
+    style: {
+      paddingLeft: "10px",
+      paddingRight: "10px",
+      wordBreak: "break-word",
+    },
+  },
   rows: {
     style: {
-      fontSize: "12px",
+      fontSize: "14px",
       backgroundColor: "transparent",
       "&:not(:last-of-type)": {
         borderBottomStyle: "solid",
         borderBottomWidth: "2px",
         borderBottomColor: "#fff",
       },
+    },
+  },
+  pagination: {
+    style: {
+      fontSize: "14px",
+      backgroundColor: "transparent",
+      borderTopStyle: "solid",
+      borderTopWidth: "2px",
+      borderTopColor: "#fff",
+      color: "#000",
     },
   },
 };
@@ -129,6 +146,7 @@ const Table = ({ data }) => {
           data={filteredItems}
           customStyles={customStyles}
           style={tableOverrideStyles}
+          paginationRowsPerPageOptions={[20, 50, 100]}
           pagination
           fixedHeader
           noHeader

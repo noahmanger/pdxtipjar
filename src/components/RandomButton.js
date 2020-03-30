@@ -1,4 +1,6 @@
 import React from "react";
+import { trackCustomEvent } from "gatsby-plugin-google-analytics";
+
 import getSheets from "../effects/getSheets";
 
 function getRandomInt(max) {
@@ -10,6 +12,12 @@ const RandomButton = ({ text, handleClick }) => {
     <button
       className="random-button"
       onClick={() => {
+        trackCustomEvent({
+          category: "Random Button",
+          action: "Click",
+          label: text,
+        });
+
         getSheets()
           .then(response => {
             const rows = response.slice(1); // Skip header row
