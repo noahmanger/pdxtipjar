@@ -146,7 +146,8 @@ const Table = ({ data }) => {
           data={filteredItems}
           customStyles={customStyles}
           style={tableOverrideStyles}
-          paginationRowsPerPageOptions={[20, 50, 100]}
+          paginationRowsPerPageOptions={[50, 100, 200]}
+          paginationPerPage={50}
           pagination
           fixedHeader
           noHeader

@@ -11,6 +11,7 @@ $mint: #e2efbb;
 $peach: #ff9469;
 $border: $peach;
 $green: #48c36e;
+$link: #b33300;
 
 @import "modal.scss";
 
@@ -50,7 +51,7 @@ main {
 }
 
 a {
-  color: #000;
+  color: $link;
 }
 
 button {
@@ -139,6 +140,8 @@ nav {
     border: none;
     padding: 0;
     text-align: left;
+    text-decoration: underline dotted;
+    color: $link;
   }
 }
 

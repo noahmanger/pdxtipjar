@@ -8,8 +8,14 @@ const stripHandle = handle => {
   if (handle.startsWith("$")) {
     return handle.split("$")[1];
   }
-  if (handle.startsWith("Paypal.me/")) {
-    return handle.split("Paypal.me/")[1];
+  if (handle.toLowerCase().startsWith("paypal.me/")) {
+    return handle.toLowerCase().split("paypal.me/")[1];
+  }
+  if (handle.toLowerCase().startsWith("https://www.paypal.me/")) {
+    return handle.toLowerCase().split("https://www.paypal.me/")[1];
+  }
+  if (handle.toLowerCase().startsWith("https://paypal.me/")) {
+    return handle.toLowerCase().split("https://paypal.me/")[1];
   }
   return handle;
 };
