@@ -10,9 +10,9 @@ If it's your first time, install dependencies:
 
 Start developing:
 
-    ```shell
-    gatsby develop
-    ```
+```shell
+   gatsby develop
+```
 
 ## Cloning
 We're working on makig this easier, but for now, if you'd like to duplicate this site for your own city:
