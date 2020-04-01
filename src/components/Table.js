@@ -9,7 +9,7 @@ const HEADERS = {
   name: "Name",
   app: "Pay",
   handle: "Handle",
-  support_others: "Do you support others?",
+  support_others: "Do you support others financially?",
   healthcare: "Do you have healthcare?",
 };
 

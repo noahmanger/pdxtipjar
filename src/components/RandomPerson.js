@@ -20,7 +20,8 @@ const RandomPersonContent = props => {
         <strong>Do you have health care:</strong> {person.healthcare}
       </p>
       <p>
-        <strong>Do you support others?</strong> {person.support_others}
+        <strong>Do you support others financially?</strong>{" "}
+        {person.support_others}
       </p>
       <p>
         <strong>{person.app}:</strong> {person.handle}
