@@ -10,6 +10,7 @@ import PropTypes from "prop-types";
 import { useStaticQuery, graphql, Link } from "gatsby";
 
 import Header from "./header";
+import { OutboundLink } from "gatsby-plugin-google-analytics";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -28,7 +29,10 @@ const Layout = ({ children }) => {
       <main>{children}</main>
       <footer>
         <Link to="/">Home</Link> | <Link to="/about">About</Link> |{" "}
-        <Link to="/donate">Donate</Link> | <Link to="/signup">Sign up</Link>
+        <Link to="/donate">Donate</Link> | <Link to="/signup">Sign up</Link> |{" "}
+        <OutboundLink href="https://github.com/noahmanger/pdxtipjar">
+          GitHub
+        </OutboundLink>
       </footer>
     </div>
   );
