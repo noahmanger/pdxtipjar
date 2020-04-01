@@ -31,7 +31,7 @@ function SEO({ description, title }) {
       <meta
         name="twitter:description"
         content="Share a small act of kindness with our
-      service industry community during these uncertain times"
+      service industry community during these uncertain times."
       />
       <meta
         name="twitter:image"
