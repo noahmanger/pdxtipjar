@@ -26,6 +26,17 @@ function SEO({ description, title }) {
         href={`${withPrefix("/")}images/favicon-16x16.png`}
         sizes="16x16"
       />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content="PDX Tip Jar" />
+      <meta
+        name="twitter:description"
+        content="Share a small act of kindness with our
+      service industry community during these uncertain times"
+      />
+      <meta
+        name="twitter:image"
+        content={`${withPrefix("/")}images/logo.png`}
+      />
     </Helmet>
   );
 }
