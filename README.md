@@ -15,7 +15,7 @@ Start developing:
 ```
 
 ## Cloning
-We're working on makig this easier, but for now, if you'd like to duplicate this site for your own city:
+We're working on making this easier, but for now, if you'd like to duplicate this site for your own city:
 
 1. Fork this repo.
 2. Set up a new Google Form that saves data to [a Google Sheet with these headers](https://docs.google.com/spreadsheets/d/e/2PACX-1vQuZugxK6PwsMWUTHFrWxF7xZ0mmlkIcNLLQ4H8LWjflx_JpPi1804_BgKp-KLNnScVnmcmant9DDmp/pubhtml?gid=1536693349&single=true)
