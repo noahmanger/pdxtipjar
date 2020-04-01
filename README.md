@@ -1,6 +1,6 @@
 This is a simple [Gatsby](https://www.gatsbyjs.org/) site that pulls data from a Google Sheet. We encourage anyone who wants to set up their own site to clone this repo. We also welcome contributors to the pdxtipjar.com site. If you have any bugs or feature requests, go ahead and file an issue.
 
-This site is an all volunteer effor by [Jacqi Ko](https://jaxko.com) and [Noah Manger](https://github.com/noahmanger).
+PDX Tip Jar is an all volunteer effort by [Jacqi Ko](https://jaxko.com) and [Noah Manger](https://github.com/noahmanger). If you haven't already, we encourage you to go tip someone in need!
 
 ## Developing
 
