@@ -110,7 +110,8 @@ const Table = ({ data }) => {
 
   const filteredItems = filterText
     ? rows.filter(
-        row => row.work && row.work.toLowerCase().includes(filterText)
+        row =>
+          row.work && row.work.toLowerCase().includes(filterText.toLowerCase())
       )
     : rows;
 
