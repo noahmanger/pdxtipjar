@@ -57,7 +57,7 @@ const AboutPage = () => (
         <a href="https://humansolutions.org">Human Solutions</a>
       </li>
       <li>
-        Medicatl assistance: <a href="https://oregon.gov">oregon.gov</a>
+        Medical assistance: <a href="https://oregon.gov">oregon.gov</a>
       </li>
     </ul>
   </Layout>
