@@ -21,15 +21,15 @@ const stripHandle = handle => {
 };
 
 const buildURL = (app, handle) => {
-  if (app === "Venmo") {
+  if (app.toLowerCase() === "venmo") {
     return `https://venmo.com/${stripHandle(handle)}`;
   }
 
-  if (app === "Cashapp") {
+  if (app.toLowerCase() === "cashapp") {
     return `https://cash.app/$${stripHandle(handle)}`;
   }
 
-  if (app === "Paypal") {
+  if (app.toLowerCase() === "paypal") {
     return `https://paypal.me/${stripHandle(handle)}`;
   }
 };
