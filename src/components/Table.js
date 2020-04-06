@@ -111,6 +111,7 @@ const Table = ({ data }) => {
   const filteredItems = filterText
     ? rows.filter(
         row =>
+          row.name && row.name.toLowerCase().includes(filterText.toLowerCase()) ||
           row.work && row.work.toLowerCase().includes(filterText.toLowerCase())
       )
     : rows;
@@ -137,7 +138,7 @@ const Table = ({ data }) => {
           <h2>{rows.length} people looking for tips</h2>
           <input
             type="text"
-            placeholder="Filter by place"
+            placeholder="Search"
             onChange={e => setFilterText(e.target.value)}
             value={filterText}
           />
