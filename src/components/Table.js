@@ -138,7 +138,7 @@ const Table = ({ data }) => {
           <h2>{rows.length} people looking for tips</h2>
           <input
             type="text"
-            placeholder="Search"
+            placeholder="Filter by name or place"
             onChange={e => setFilterText(e.target.value)}
             value={filterText}
           />
