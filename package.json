@@ -5,6 +5,7 @@
   "version": "1.0.0",
   "author": "Noah Manger <noah.manger@gmail.com>",
   "dependencies": {
+    "@auth0/auth0-spa-js": "^1.6.5",
     "gatsby": "^2.19.45",
     "gatsby-image": "^2.2.44",
     "gatsby-plugin-google-analytics": "^2.2.2",
@@ -16,7 +17,6 @@
     "gatsby-source-filesystem": "^2.1.56",
     "gatsby-transformer-sharp": "^2.3.19",
     "node-sass": "^4.13.1",
-    "papaparse": "^5.1.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-data-table-component": "^6.3.1",

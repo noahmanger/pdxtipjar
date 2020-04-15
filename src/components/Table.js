@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import DataTable from "react-data-table-component";
 import PaymentButton from "./PaymentButton";
 import RandomPerson from "./RandomPerson";
@@ -102,24 +102,39 @@ const generateColumns = (row, setSelectedPerson) =>
       };
     });
 
-const Table = ({ data }) => {
-  const [filterText, setFilterText] = React.useState("");
+const Table = ({
+  data,
+  count,
+  handlePageChange,
+  handlePerRowsChange,
+  paginationPerPage,
+}) => {
+  // const [filterText, setFilterText] = React.useState("");
   const [rows, setRows] = React.useState([]);
   const [columns, setColumns] = React.useState([]);
   const [selectedPerson, setSelectedPerson] = React.useState({});
 
-  const filteredItems = filterText
-    ? rows.filter(
-        row =>
-          row.name && row.name.toLowerCase().includes(filterText.toLowerCase()) ||
-          row.work && row.work.toLowerCase().includes(filterText.toLowerCase())
-      )
-    : rows;
+  // const filteredItems = filterText
+  //   ? rows.filter(
+  //       row =>
+  //         row.name && row.name.toLowerCase().includes(filterText.toLowerCase()) ||
+  //         row.work && row.work.toLowerCase().includes(filterText.toLowerCase())
+  //     )
+  //   : rows;
 
-  if (data.length > 0 && rows.length === 0) {
+  useEffect(() => {
+    if (!data.length) {
+      return;
+    }
+
     setColumns(generateColumns(data[0], setSelectedPerson));
-    setRows(data.slice(1).map((r, i) => ({ ...{ id: i }, ...r })));
-  }
+    setRows(data.map((r, i) => ({
+      ...{ id: i },
+      ...r,
+     })
+    ));
+
+  }, [data])
 
   if (rows.length === 0) {
     return <p className="loading">Loading...</p>;
@@ -135,22 +150,26 @@ const Table = ({ data }) => {
       )}
       <div className="table">
         <header className="table-header">
-          <h2>{rows.length} people looking for tips</h2>
-          <input
+          <h2>{data.length} people looking for tips</h2>
+          {/* <input
             type="text"
             placeholder="Filter by name or place"
             onChange={e => setFilterText(e.target.value)}
             value={filterText}
-          />
+          /> */}
         </header>
         <DataTable
           columns={columns}
-          data={filteredItems}
+          data={rows}
+          onChangeRowsPerPage={handlePerRowsChange}
+          onChangePage={handlePageChange}
           customStyles={customStyles}
           style={tableOverrideStyles}
           paginationRowsPerPageOptions={[50, 100, 200]}
-          paginationPerPage={50}
           pagination
+          paginationPerPage={paginationPerPage}
+          paginationServer
+          paginationTotalRows={count}
           fixedHeader
           noHeader
           overflowY
