@@ -10,8 +10,8 @@ const AboutPage = () => (
     <p>
       Wisconsin, along with the rest of the world, is under stay at home orders.
       Bars and restaurants have had to make drastic changes in order to stay in
-      business. Takeout and delivery are still allowed, but in most cases bars and 
-      restaurants have laid off or furloughed much of their staff. This will be 
+      business. Takeout and delivery are still allowed, but in most cases establishments
+      have laid off or furloughed much of their staff. This will be 
       the case until at least May 26th, but it'll take even longer for people
       to get back to normal.
     </p>
