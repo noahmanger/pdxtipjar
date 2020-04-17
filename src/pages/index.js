@@ -12,7 +12,7 @@ import social4 from "../images/social-4.png";
 
 const Intro = () => (
   <div className="intro">
-    <h2>About PDX Tip Jar</h2>
+    <h2>About Madison Tip Jar</h2>
     <p>
       Madison Tip Jar is an opportunity to share a small act of kindness with our
       Service Industry community during these uncertain times. Since Governor Evers 
