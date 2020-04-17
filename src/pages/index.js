@@ -14,12 +14,10 @@ const Intro = () => (
   <div className="intro">
     <h2>About PDX Tip Jar</h2>
     <p>
-      PDX Tip Jar is an opportunity to share a small act of kindness with our
-      Service Industry community during these uncertain times. With a government
-      mandate in effect as of Tuesday, March 17th, all bars and restaurants in
-      the state of Oregon are required to close for the next four weeks—with the
-      exception of take-out and delivery operations—which has put many folks out
-      of work.
+      Madison Tip Jar is an opportunity to share a small act of kindness with our
+      Service Industry community during these uncertain times. Since Governor Evers 
+      issued a stay-at-home order in March, thousands of servers, bartenders, baristas
+      and other service industry workers have been laid off or furloughed. 
     </p>
     <p>
       The premise is simple: Tip a dollar, $5, $10, $20—or whatever you’d
@@ -45,7 +43,7 @@ const Pledge = () => (
     </p>
     <h3>Help spread the word and share on social media!</h3>
     <a href={social1}>
-      <img src={social1} alt="Send some love on PDX tip jar" />
+      <img src={social1} alt="Send some love on Madison tip jar" />
     </a>
     <a href={social2}>
       <img
