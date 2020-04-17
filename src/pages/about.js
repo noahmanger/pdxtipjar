@@ -26,7 +26,7 @@ const AboutPage = () => (
     <p>
       <a href="mailto:vicky@thingsimadetoday.com">vicky@thingsimadetoday.com</a>
     </p>
-
+  </Layout>
 );
 
 export default AboutPage;
