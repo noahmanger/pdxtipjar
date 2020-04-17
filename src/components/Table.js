@@ -9,11 +9,9 @@ const HEADERS = {
   name: "Name",
   app: "Pay",
   handle: "Handle",
-  support_others: "Do you support others financially?",
-  healthcare: "Do you have healthcare?",
 };
 
-const VISIBLE_COLUMNS = ["work", "name", "app", "support_others", "healthcare"];
+const VISIBLE_COLUMNS = ["work", "name", "app"];
 
 const tableOverrideStyles = {
   marginBottom: "0px",
@@ -98,7 +96,6 @@ const generateColumns = (row, setSelectedPerson) =>
         sortable: ["name", "work"].indexOf(d) > -1 ? true : false,
         selector: d,
         wrap: true,
-        hide: ["healthcare", "support_others"].indexOf(d) > -1 ? "md" : "",
       };
     });
 

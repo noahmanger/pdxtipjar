@@ -27,7 +27,7 @@ function SEO({ description, title }) {
         sizes="16x16"
       />
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:title" content="PDX Tip Jar" />
+      <meta name="twitter:title" content="Madison Tip Jar" />
       <meta
         name="twitter:description"
         content="Share a small act of kindness with our
