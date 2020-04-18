@@ -111,8 +111,10 @@ const Table = ({ data }) => {
   const filteredItems = filterText
     ? rows.filter(
         row =>
-          row.name && row.name.toLowerCase().includes(filterText.toLowerCase()) ||
-          row.work && row.work.toLowerCase().includes(filterText.toLowerCase())
+          (row.name &&
+            row.name.toLowerCase().includes(filterText.toLowerCase())) ||
+          (row.work &&
+            row.work.toLowerCase().includes(filterText.toLowerCase()))
       )
     : rows;
 
