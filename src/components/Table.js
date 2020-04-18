@@ -118,7 +118,7 @@ const Table = ({ data }) => {
 
   if (data.length > 0 && rows.length === 0) {
     setColumns(generateColumns(data[0], setSelectedPerson));
-    setRows(data.slice(1).map((r, i) => ({ ...{ id: i }, ...r })));
+    setRows(data.map((r, i) => ({ ...{ id: i }, ...r })));
   }
 
   if (rows.length === 0) {
