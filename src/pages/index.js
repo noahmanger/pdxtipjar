@@ -14,17 +14,10 @@ const Intro = () => (
   <div className="intro">
     <h2>About Madison Tip Jar</h2>
     <p>
-<<<<<<< HEAD
-    Madison Tip Jar is an opportunity to share a small act of kindness with our
-    Service Industry community during these uncertain times. Since Governor Evers
-    issued a stay-at-home order in March, thousands of servers, bartenders, baristas
-    and other service industry workers have been laid off or furloughed.
-=======
       Madison Tip Jar is an opportunity to share a small act of kindness with our
       Service Industry community during these uncertain times. Since Governor Evers 
       issued a stay-at-home order in March, thousands of servers, bartenders, baristas
       and other service industry workers have been laid off or furloughed. 
->>>>>>> 03bffcd3d328d363db6d0b1d2f7639f0388f39d7
     </p>
     <p>
       The premise is simple: Tip a dollar, $5, $10, $20—or whatever you’d
