@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
         <Link to="/">Home</Link> | <Link to="/about">About</Link> |{" "}
         <Link to="/donate">Donate</Link> | <Link to="/signup">Sign up</Link> |{" "}
         <OutboundLink href="https://github.com/noahmanger/pdxtipjar">
-          GitHub
+          Based on pdxtipjar
         </OutboundLink>
       </footer>
     </div>
