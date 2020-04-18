@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import EditForm from './Edit';
 import searchWorkers from '../../effects/searchWorkers';
+import deleteWorker from '../../effects/deleteWorker';
 import AdminTable from './Table';
 import Modal from "../Modal";
 
@@ -26,10 +27,32 @@ const SearchForm = ({ token }) => {
     setShowModal(true);
   };
 
-  const handleEditForm =() => {
+  const handleEditForm = () => {
     setEditData({});
     setData([]);
     setShowModal(false);
+  };
+
+  const handleDeleteUser = async ({ userId }) => {
+    const confirmed = window.confirm('Are you sure you want to delete this user?\nThis action cannot be undone.');
+
+    if (!confirmed) {
+      return false;
+    }
+
+    try {
+      const { success } = await deleteWorker({ userId, token });
+
+      if (!success) {
+        throw new Error('Something went wrong while trying to delete a user.');
+      }
+
+      setData([]);
+      setEditData({});
+      setShowModal(false);
+    } catch (error) {
+      // no-op
+    }
   };
 
   const handleChange = e => setValue(e.target.value);
@@ -41,11 +64,10 @@ const SearchForm = ({ token }) => {
         token,
         query: value,
       });
-      
+
       setValue('');
-      setData(workers);
+      setData(workers || []);
     } catch (error) {
-      
     }
   };
 
@@ -72,6 +94,7 @@ const SearchForm = ({ token }) => {
                 <EditForm
                   editData={editData}
                   handleEditForm={handleEditForm}
+                  handleDeleteUser={handleDeleteUser}
                   token={token}
                 />
               }
