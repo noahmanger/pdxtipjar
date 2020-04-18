@@ -5,13 +5,13 @@ $small: 400px;
 $medium: 700px;
 $large: 1000px;
 
-$bg: #ffd6bf;
-$tangerine: #ffae80;
-$mint: #e2efbb;
-$peach: #ff9469;
+$bg: #E5FCC2;
+$tangerine: #594F4F;
+$mint: #547980;
+$peach: #547980;
 $border: $peach;
-$green: #48c36e;
-$link: #b33300;
+$green: #547980;
+$link: #594F4F;
 
 @import "modal.scss";
 
@@ -84,10 +84,10 @@ nav {
     margin-bottom: 20px;
     text-align: center;
     text-decoration: none;
-    color: #fbaa9a;
+    color: #547980;
     font-weight: bold;
     font-size: 18px;
-    border: 1px solid #fbaa9a;
+    border: 1px solid #547980;
   }
 }
 
