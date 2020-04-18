@@ -1,9 +1,9 @@
 {
-  "name": "pdxtipjar",
+  "name": "madisontipjar",
   "private": true,
-  "description": "Support out-of-work members of the Portland Service industry.",
+  "description": "Support out-of-work members of the Madison Service industry.",
   "version": "1.0.0",
-  "author": "Noah Manger <noah.manger@gmail.com>",
+  "author": "Vicky Volvovski <vicky@thingsimadetoday.com>",
   "dependencies": {
     "gatsby": "^2.19.45",
     "gatsby-image": "^2.2.44",

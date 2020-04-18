@@ -8,6 +8,7 @@ const AboutPage = () => (
     <SEO title="About" />
     <h1>About</h1>
     <p>
+<<<<<<< HEAD
     Wisconsin, along with the rest of the world, is under stay at home orders.
     Bars and restaurants have had to make drastic changes in order to stay in
     business. Takeout and delivery are still allowed, but in most cases establishments
@@ -20,6 +21,20 @@ const AboutPage = () => (
     , a virtual "tip jar" for Portland's service industry workers. Simply put, if you've
     lost hours or your job, we hope you'll sign up to receive tips. If you've been fortunate
     enough to stay fully employed, we encourage you to tip as often as you can.
+=======
+      Wisconsin, along with the rest of the world, is under stay at home orders.
+      Bars and restaurants have had to make drastic changes in order to stay in
+      business. Takeout and delivery are still allowed, but in most cases establishments
+      have laid off or furloughed much of their staff. This will be 
+      the case until at least May 26th, but it'll take even longer for people
+      to get back to normal.
+    </p>
+    <p>
+      This site was inspired by Jacqi and Noah's <a href="pdxtipjar.com">pdxtipjar.com</a>
+      , a virtual "tip jar" for Portland's service industry workers. Simply put, if you've 
+      lost hours or your job, we hope you'll sign up to receive tips. If you've been fortunate 
+      enough to stay fully employed, we encourage you to tip as often as you can.
+>>>>>>> 03bffcd3d328d363db6d0b1d2f7639f0388f39d7
     </p>
     <p>Grateful for your support,</p>
     <p>Vicky @thingsimadetoday</p>
