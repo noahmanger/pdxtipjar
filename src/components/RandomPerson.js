@@ -17,13 +17,6 @@ const RandomPersonContent = props => {
         </p>
       )}
       <p>
-        <strong>Do you have health care:</strong> {person.healthcare}
-      </p>
-      <p>
-        <strong>Do you support others financially?</strong>{" "}
-        {person.support_others}
-      </p>
-      <p>
         <strong>{person.app}:</strong> {person.handle}
       </p>
       <PaymentButton app={person.app} handle={person.handle} />
