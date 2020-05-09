@@ -25,7 +25,6 @@ const AuthWrapper = (props) => {
       try {
         const { __raw: idToken } = await getIdTokenClaims()
         setToken(idToken);
-        console.log('idToken: ', idToken);
       } catch (error) {
         // no-op
       }

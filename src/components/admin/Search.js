@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import EditForm from './Edit';
-import searchWorkers from '../../effects/searchWorkers';
+import getWorkers from '../../effects/getWorkers';
 import deleteWorker from '../../effects/deleteWorker';
 import AdminTable from './Table';
 import Modal from "../Modal";
@@ -60,7 +60,7 @@ const SearchForm = ({ token }) => {
   const handleSubmit = async (e) => {
     try {
       e.preventDefault();
-      const { workers } = await searchWorkers({
+      const { workers } = await getWorkers({
         token,
         query: value,
       });

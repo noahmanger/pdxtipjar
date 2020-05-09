@@ -8,22 +8,7 @@ const Donate = () => {
   const [loading, setLoading] = useState(false);
   const [count, setCount] = useState(0);
   const [numPerPage, setNumPerPage] = useState(50);
-
-  const handlePerRowsChange = async (newPerPage, page) => {
-    await fetchWorkers({
-      pageNum: page,
-      numPerPage: newPerPage,
-    });
-
-    setNumPerPage(newPerPage);
-  };
-
-  const handlePageChange = async (pageNum) => {
-    await fetchWorkers({
-      pageNum,
-      numPerPage,
-    });
-  };
+  const [filterText, setFilterText] = useState('');
 
   const fetchWorkers = async ({ pageNum, numPerPage }) => {
     try {
@@ -31,6 +16,7 @@ const Donate = () => {
       const { workers, count } = await getWorkers({
         pageNum,
         numPerPage,
+        query: filterText,
       });
       
       setData(workers);
@@ -41,6 +27,39 @@ const Donate = () => {
       setLoading(false);
     }
   }
+  const handleSearchInput = (e) => {
+    setFilterText(e.target.value);
+  };
+
+  const handleSearchKeyPress = async (e) => {
+    if (e.key !== 'Enter') {
+      return;
+    }
+
+    await fetchWorkers({
+      pageNum: 1,
+      numPerPage,
+      query: filterText,
+    });
+  };
+
+  const handlePerRowsChange = async (newPerPage, page) => {
+    await fetchWorkers({
+      pageNum: page,
+      numPerPage: newPerPage,
+      query: filterText,
+    });
+
+    setNumPerPage(newPerPage);
+  };
+
+  const handlePageChange = async (pageNum) => {
+    await fetchWorkers({
+      query: filterText,
+      pageNum,
+      numPerPage,
+    });
+  };
 
   useEffect(() => {
     fetchWorkers({
@@ -57,6 +76,8 @@ const Donate = () => {
       handlePerRowsChange={handlePerRowsChange}
       handlePageChange={handlePageChange}
       paginationPerPage={numPerPage}
+      handleSearchInput={handleSearchInput}
+      handleSearchKeyPress={handleSearchKeyPress}
     />
   );
 };

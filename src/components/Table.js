@@ -103,24 +103,18 @@ const generateColumns = (row, setSelectedPerson) =>
     });
 
 const Table = ({
-  data,
+  data = [],
   count,
   handlePageChange,
   handlePerRowsChange,
   paginationPerPage,
+  handleSearchInput,
+  handleSearchKeyPress,
+  filterText
 }) => {
-  // const [filterText, setFilterText] = React.useState("");
   const [rows, setRows] = React.useState([]);
   const [columns, setColumns] = React.useState([]);
   const [selectedPerson, setSelectedPerson] = React.useState({});
-
-  // const filteredItems = filterText
-  //   ? rows.filter(
-  //       row =>
-  //         row.name && row.name.toLowerCase().includes(filterText.toLowerCase()) ||
-  //         row.work && row.work.toLowerCase().includes(filterText.toLowerCase())
-  //     )
-  //   : rows;
 
   useEffect(() => {
     if (!data.length) {
@@ -151,12 +145,13 @@ const Table = ({
       <div className="table">
         <header className="table-header">
           <h2>{data.length} people looking for tips</h2>
-          {/* <input
+          <input
             type="text"
             placeholder="Filter by name or place"
-            onChange={e => setFilterText(e.target.value)}
+            onChange={handleSearchInput}
+            onKeyPress={handleSearchKeyPress}
             value={filterText}
-          /> */}
+          />
         </header>
         <DataTable
           columns={columns}

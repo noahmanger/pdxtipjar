@@ -2,5 +2,5 @@
 export default {
   domain: 'pdxtipjar.auth0.com',
   clientId: 'FQMWCnkyT7mgWH2U4zrpPprYaHOG3rfM',
-  apiUrl: 'http://localhost:3000/api/v1',
+  apiUrl: 'https://api.pdxtipjar.com/api/v1',
 }
