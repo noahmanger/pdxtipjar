@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "author": "Noah Manger <noah.manger@gmail.com>",
   "dependencies": {
-    "gatsby": "^2.19.45",
+    "gatsby": "^2.32.13",
     "gatsby-image": "^2.2.44",
     "gatsby-plugin-google-analytics": "^2.2.2",
     "gatsby-plugin-manifest": "^2.2.48",
